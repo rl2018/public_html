@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../assets/css/portfolio.css">
+        <title>Alert Box: Calculate Circle Circumference</title>
+        <style>
+            form{
+                margin:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="challengeinfo">
+            <p id="maintitle">Alert Box: Calculate Circle Circumference</p>
+            <p id="subtitle">Take the radius of a circle as input from the user and print its circumference</p>
+        </div>
+        <form onsubmit="return circumferenceCalc(event)">
+            <label for="number1">radius of the circle</label><br>
+            <input id="number1" type="number" name="number1" placeholder="radius of the circle"><br>
+            <button type="submit">Submit</button>
+        </form>
+        <script>
+        function circumferenceCalc(event){
+            let radius = event.target.elements.number1.value;
+            let pi = Math.PI;
+            let circumference = 2 * +radius * pi;
+            alert("the circumference of a circle with radius "+radius+" is "+circumference);
+            return false;
+        }
+        </script>
+    </body>
+</html>

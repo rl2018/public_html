@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../assets/css/portfolio.css">
+        <title>Print Number of Elements</title>
+        <style>
+            #nameslist{
+                margin:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="challengeinfo">
+            <p id="maintitle">Print Number of Elements</p>
+            <p id="subtitle">Given an array names, write a program to print out the total number of names in the list</p>
+        </div>
+        <p id="nameslist"></p>
+        <script>
+        const names = [];
+        names[0]="John";
+        names[1]="James";
+        names[2]="Steve";
+        names[3]="Adam";
+        names[4]="Richard";
+        let nameslist=document.getElementById("nameslist");
+        nameslist.innerHTML = names.length;
+        </script>
+    </body>
+</html>

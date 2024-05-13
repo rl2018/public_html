@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../assets/css/portfolio.css">
+        <title>Manipulate the DOM: Product of Two Numbers</title>
+        <style>
+            form{
+                margin:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="challengeinfo">
+            <p id="maintitle">Manipulate the DOM: Product of Two Numbers</p>
+            <p id="subtitle">Take two numbers as input from the user and print their product</p>
+        </div>
+        <form onsubmit="return productCalc(event)">
+            <label for="number1">number1</label><br>
+            <input id="number1" type="number" name="number1" placeholder="number 1"><br>
+            <label for="number2">number2</label><br>
+            <input id="number2" type="number" name="number2" placeholder="number 2"><br>
+            <button type="submit">Submit</button>
+            <p id="showproduct"></p>
+        </form>
+        <script>
+        function productCalc(event){
+            let number1=event.target.elements.number1.value;
+            let number2=event.target.elements.number2.value;
+            let product=+number1 * +number2;
+            let showproduct=document.getElementById("showproduct");
+            showproduct.innerHTML = "product: "+product;
+            return false;
+        }
+        </script>
+    </body>
+</html>

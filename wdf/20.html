@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../assets/css/portfolio.css">
+        <title>Print All Elements</title>
+        <style>
+            form{
+                margin:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="challengeinfo">
+            <p id="maintitle">Print All Elements</p>
+            <p id="subtitle">Given an array names, write a program to print out all the names in the list</p>
+        </div>
+        <p id="nthprint"></p>
+        <script>
+        const names = [];
+        names[0]="John";
+        names[1]="James";
+        names[2]="Steve";
+        names[3]="Adam";
+        names[4]="Richard";
+        let nthprint=document.getElementById("nthprint");
+        for(let i = 0; i < names.length; i++){
+            nthprint.innerHTML += names[i]+" ";
+        }
+        </script>
+    </body>
+</html>

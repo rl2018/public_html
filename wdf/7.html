@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../assets/css/portfolio.css">
+        <title>Alert Box: Print Your Name</title>
+        <style>
+            form{
+                margin:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="challengeinfo">
+            <p id="maintitle">Alert Box: Print Your Name</p>
+            <p id="subtitle">Write a program that prints your name</p>
+        </div>
+        <form onsubmit="return printName(event)">
+            <label for="number1">name</label><br>
+            <input id="name" type="text" name="name" placeholder="name"><br>
+            <button type="submit">Submit</button>
+            <p id="showname"></p>
+        </form>
+        <script>
+        function printName(event){
+            let name=event.target.elements.name.value;
+            alert(name);
+            return false;
+        }
+        </script>
+    </body>
+</html>

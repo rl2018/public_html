@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../assets/css/portfolio.css">
+        <title>Manipulate the DOM: Print Your Name</title>
+        <style>
+            form{
+                margin:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="challengeinfo">
+            <p id="maintitle">Manipulate the DOM: Print Your Name</p>
+            <p id="subtitle">Write a program that prints your name</p>
+        </div>
+        <form onsubmit="return nameShow(event)">
+            <label for="name">name</label><br>
+            <input id="name" type="text" name="name" placeholder="your name"><br>
+            <button type="submit">Submit</button>
+            <p id="showname"></p>
+        </form>
+        <script>
+        function nameShow(event){
+            let name=event.target.elements.name.value;
+            let showname=document.getElementById("showname");
+            showname.innerHTML = name;
+            return false;
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../assets/css/portfolio.css">
+        <title>Manipulate the DOM: Convert Temperature</title>
+        <style>
+            form{
+                margin:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="challengeinfo">
+            <p id="maintitle">Manipulate the DOM: Convert Temperature</p>
+            <p id="subtitle">Take a temperature in Celsius as input from the user and print its equivalent in Fahrenheit</p>
+        </div>
+        <form onsubmit="return tempConvert(event)">
+            <label for="celsius">temperature in celsius</label><br>
+            <input id="celsius" type="number" name="celsius" placeholder="temperature in celsius"><br>
+            <button type="submit">Submit</button>
+            <p id="showfahrenheit"></p>
+        </form>
+        <script>
+        function tempConvert(event){
+            let celsius=event.target.elements.celsius.value;
+            let fahrenheit = (celsius*9/5)+32;
+            let showfahrenheit=document.getElementById("showfahrenheit");
+            showfahrenheit.innerHTML = celsius+" degrees celsius is equal to "+fahrenheit+" degrees fahrenheit";
+            return false;
+        }
+        </script>
+    </body>
+</html>

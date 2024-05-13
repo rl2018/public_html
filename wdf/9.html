@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../assets/css/portfolio.css">
+        <title>Manipulate the DOM: Greet the User</title>
+        <style>
+            form{
+                margin:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="challengeinfo">
+            <p id="maintitle">Manipulate the DOM: Greet the User</p>
+            <p id="subtitle">Take a user input (their name) and print a greeting message with their name</p>
+        </div>
+        <form onsubmit="return printName(event)">
+            <label for="name">name</label><br>
+            <input id="name" type="text" name="name" placeholder="name"><br>
+            <button type="submit">Submit</button>
+            <p id="showname"></p>
+        </form>
+        <script>
+        function printName(event){
+            let name=event.target.elements.name.value;
+            let showname=document.getElementById("showname");
+            showname.innerHTML = "welcome, "+name;
+            return false;
+        }
+        </script>
+    </body>
+</html>

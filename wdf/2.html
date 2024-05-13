@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../assets/css/portfolio.css">
+        <title>Alert Box: Greet the User</title>
+        <style>
+            #welcomeInput{
+                margin:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="challengeinfo">
+            <p id="maintitle">Alert Box: Greet the User</p>
+            <p id="subtitle">Take a user input (their name) and print a greeting message with their name</p>
+        </div>
+        <form id="welcomeInput" onsubmit="return welcomeUser(event)">
+            <label for="name">name</label><br>
+            <input id="name" type="name" name="name" placeholder="name"><br>
+            <button type="submit">Submit</button>
+        </form>
+        <script>
+        function welcomeUser(event){
+            let name=event.target.elements.name.value;
+            alert("welcome, "+name+"!");
+            return false;
+        }
+        </script>
+    </body>
+</html>

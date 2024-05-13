@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../assets/css/portfolio.css">
+        <title>Alert Box: Calculate Area of Rectangle</title>
+        <style>
+            form{
+                margin:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="challengeinfo">
+            <p id="maintitle">Alert Box: Calculate Area of Rectangle</p>
+            <p id="subtitle">Take the length and width of a rectangle as input from the user and print its area</p>
+        </div>
+        <form onsubmit="return rectangleArea(event)">
+            <label for="number1">length</label><br>
+            <input id="number1" type="number" name="number1" placeholder="number 1"><br>
+            <label for="number2">width</label><br>
+            <input id="number2" type="number" name="number2" placeholder="number 2"><br>
+            <button type="submit">Submit</button>
+        </form>
+        <script>
+        function rectangleArea(event){
+            let number1=event.target.elements.number1.value;
+            let number2=event.target.elements.number2.value;
+            let sum=+number1 * +number2;
+            alert("the area of the rectangle is "+sum);
+            return false;
+        }
+        </script>
+    </body>
+</html>

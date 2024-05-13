@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../assets/css/portfolio.css">
+        <title>Alert Box: Convert Temperature</title>
+        <style>
+            form{
+                margin:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="challengeinfo">
+            <p id="maintitle">Alert Box: Convert Temperature</p>
+            <p id="subtitle">Take a temperature in Celsius as input from the user and print its equivalent in Fahrenheit</p>
+        </div>
+        <form onsubmit="return celsiusToFahrenheit(event)">
+            <label for="number1">temperature in celsius</label><br>
+            <input id="number1" type="number" name="number1" placeholder="temperature in celsius"><br>
+            <button type="submit">Submit</button>
+        </form>
+        <script>
+        function celsiusToFahrenheit(event){
+            let celsius=event.target.elements.number1.value;
+            let fahrenheit=+(celsius*9/5)+32;
+            alert(celsius+" degrees celsius is equal to "+fahrenheit+" degrees fahrenheit");
+            return false;
+        }
+        </script>
+    </body>
+</html>

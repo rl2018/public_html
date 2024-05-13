@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../assets/css/portfolio.css">
+        <title>Manipulate the DOM: Calculate Circle Circumference</title>
+        <style>
+            form{
+                margin:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="challengeinfo">
+            <p id="maintitle">Manipulate the DOM: Calculate Circle Circumference</p>
+            <p id="subtitle">Take the radius of a circle as input from the user and print its circumference</p>
+        </div>
+        <form onsubmit="return circumferenceCalc(event)">
+            <label for="radius">radius</label><br>
+            <input id="radius" type="number" name="radius" placeholder="radius"><br>
+            <button type="submit">Submit</button>
+            <p id="showcircumference"></p>
+        </form>
+        <script>
+        function circumferenceCalc(event){
+            let radius=event.target.elements.radius.value;
+            let pi = Math.PI;
+            let circumference=2 * pi * +radius;
+            let showcircumference=document.getElementById("showcircumference");
+            showcircumference.innerHTML = "circumference of the circle: "+circumference;
+            return false;
+        }
+        </script>
+    </body>
+</html>
