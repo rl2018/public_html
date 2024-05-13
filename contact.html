@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <title>Contact me</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="navbar">
+                <span><a href="index.html">Homepage</a></span>
+                <span> | </span>
+                <span><a href="contact.html">Contact me</a></span>
+                <span> | </span>
+                <span><a href="jsform.html">JS form</a></span>
+                <span id="datetime"></span>
+            </div>
+            <div class="container">
+                <h1>Contact me</h1>
+                <h3>You can contact me via e-mail or through the form below.</h3>
+                <p>Email: <a href="mailto:person@example.com">person[at]example.com</a></p>
+                <form action="contact.html" method="get" id="form1">
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea id="formtxt" placeholder="Your message"></textarea>
+                    <input type="submit" id="submitbutton">
+                </form>
+            </div>
+            <footer>
+                <p>Copyright &copy; Loran 2024</p>
+            </footer>
+        </div>
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>
