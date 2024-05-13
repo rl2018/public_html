@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../assets/css/portfolio.css">
+        <title>Alert Box: Sum of Two Numbers</title>
+        <style>
+            #sumInput{
+                margin:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="challengeinfo">
+            <p id="maintitle">Alert Box: Sum of Two Numbers</p>
+            <p id="subtitle">Take two numbers as input from the user and print their sum</p>
+        </div>
+        <form id="sumInput" onsubmit="return sumInput(event)">
+            <label for="number1">number 1</label><br>
+            <input id="number1" type="number" name="number1" placeholder="number 1"><br>
+            <label for="number2">number 2</label><br>
+            <input id="number2" type="number" name="number2" placeholder="number 2"><br>
+            <button type="submit">Submit</button>
+        </form>
+        <script>
+        function sumInput(event){
+            let number1=event.target.elements.number1.value;
+            let number2=event.target.elements.number2.value;
+            let sum=+number1+ +number2;
+            alert("sum of the two numbers is "+sum);
+            return false;
+        }
+        </script>
+    </body>
+</html>
