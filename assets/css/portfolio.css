@@ -1,0 +1,89 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+
+.main{
+    padding:10px;
+}
+
+.main #portfolio_title{
+    text-align:center;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-bottom:10px;
+}
+
+.main .sections{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-content:flex-start;
+    justify-content:flex-start;
+    align-items:flex-start;
+}
+
+.main .listsection{
+    width:21%;
+    margin:10px;
+    padding:10px 5px 10px 5px;
+    border:2px solid #d3d3d3;
+    border-radius:5px;
+    box-shadow:1px 5px 5px grey;
+    animation:fadeIn 1s;
+}
+
+.main .listsection .listtitle{
+    text-align:center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    font-size:18px;
+    margin-bottom:5px;
+}
+
+.main .listsection ol li{
+    text-align:left;
+    font-family:Arial, Helvetica, sans-serif;
+    margin:6px 0px 0px 25px;
+    padding:5px;
+    border-bottom:1px dotted #d3d3d3;
+}
+
+.main .listsection ol li a{
+    text-decoration:none;
+}
+
+.challengeinfo{
+    background-color:#D3D3D3;
+    border-bottom:1px solid grey;
+    margin-bottom:10px;
+    padding:10px;
+}
+
+.challengeinfo #maintitle{
+    text-align:center;
+    color:black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.challengeinfo #subtitle{
+    text-align:center;
+    color:#222222;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:15px;
+}
+
+input{
+    padding:7px;
+}
